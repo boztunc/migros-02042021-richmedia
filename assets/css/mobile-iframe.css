@@ -1,0 +1,102 @@
+/* RICHMEDIA MOBILE */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+body {
+
+}
+.card {
+  background: url(../img/card.png?) no-repeat;
+  background-size: 100%;
+  width: 20%;
+  height: auto;
+  display: inline-block;
+  margin: 1%;
+  cursor: pointer;
+  vertical-align: middle;
+  padding-top: 24%;
+}
+.card.open {
+  background-image: url('../img/urun-1.png');
+}
+
+/* Home Styles */
+#home-wrapper {
+  position: relative;
+}
+#home-wrapper .mobile-home-bg1 {
+  background: url(../img/mobile-home1.jpg?) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  padding-top: 99.33333333%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#home-wrapper .mobile-home-bg2 {
+  background: url(../img/mobile-home2.jpg?) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  padding-top: 99.33333333%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#home-wrapper .cards-div {
+  position: absolute;
+  font-size: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 54% 12% 0;
+}
+
+/* SINGLE PAGE STYLES */
+#single-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+#single-wrapper .mobile-single-bg1 {
+  background: url(../img/mobile-single1.jpg?) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  padding-top: 107.46666667%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#single-wrapper .mobile-single-bg2 {
+  background: url(../img/mobile-single2.jpg?) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  padding-top: 107.46666667%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#single-wrapper .cards-div {
+  position: absolute;
+  font-size: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 19% 12% 0;
+}

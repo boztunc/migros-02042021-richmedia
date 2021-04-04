@@ -1,0 +1,147 @@
+/* RICHMEDIA - DESKTOP */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: orange;
+}
+.alisveris-btn {
+  background: url(../img/alisveris-btn.png?) no-repeat;
+  background-size: 100%;
+  width: 200px;
+  height: 55px;
+  display: block;
+}
+.m-logo {
+  background: url(../img/m-logo.png?) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.card {
+  background: url(../img/card.png?) no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.card.open {
+  background-image: url('../img/urun-1.png');
+}
+/* Home Styles */
+#home-wrapper {
+  position: relative;
+}
+#home-wrapper .frame-container {
+  width: 1050px;
+  height: 614px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#home-wrapper .text1 {
+  background: url(../img/desktop-home-text1.png?) center 0 no-repeat;
+  background-size: 606px;
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  height: 606px;
+  width: 606px;
+}
+#home-wrapper .text2 {
+  background: url(../img/desktop-home-text2.png?) center 0 no-repeat;
+  background-size: 606px;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  height: 606px;
+  width: 606px;
+}
+#home-wrapper .top-shapes {
+  background: url(../img/desktop-home-shapes.png?) center 0 no-repeat;
+  background-size: 1366px auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 313px;
+  pointer-events: none;
+}
+#home-wrapper .card {
+  width: 100px;
+  height: 120px;
+  margin: 3px;
+}
+#home-wrapper .cards-div {
+  position: absolute;
+  right: 34px;
+  top: 110px;
+  width: 320px;
+  font-size: 0;
+}
+#home-wrapper .m-logo {
+  width: 71px;
+  height: 65px;
+  margin: 0 18px;
+}
+#home-wrapper .alisveris-btn {
+  position: absolute;
+  right: 95px;
+  top: 516px;
+}
+
+/* SINGLE PAGE STYLES */
+#single-wrapper {
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  height: 750px;
+}
+
+#single-wrapper .text1 {
+  background: url(../img/desktop-single-text1.png?) no-repeat;
+  background-size: 100%;
+  width: 298px;
+  height: 279px;
+  position: relative;
+  top: 10px;
+  margin-bottom: 45px;
+}
+#single-wrapper .text2 {
+  background: url(../img/desktop-single-text2.png?) no-repeat;
+  background-size: 100%;
+  width: 298px;
+  height: 298px;
+  position: relative;
+  top: 10px;
+  margin-bottom: 45px;
+}
+#single-wrapper .card {
+  width: 93px;
+  height: 112px;
+  margin: 3px;
+}
+#single-wrapper .cards-div {
+  position: relative;
+  width: 300px;
+  font-size: 0;
+}
+#single-wrapper .m-logo {
+  background: url(../img/m-logo.png?) center 0 no-repeat;
+  background-size: 100%;
+  width: 65px;
+  height: 60px;
+  display: inline-block;
+  margin: 0 18px;
+  vertical-align: middle;
+}
+#single-wrapper .alisveris-btn {
+  width: 200px;
+  height: 55px;
+  display: block;
+  margin: 12px auto;
+}
