@@ -43,22 +43,16 @@ function selectCards() {
         var product = $(this).data('product')
 
         selectedProducts.push(product)
-        console.log('last selected... ', selectedProducts[selectedProducts.length - 2])
+        if (selectedProducts.length === 2) {
+            if (selectedProducts[0] === selectedProducts[1]) {
+                matchProducts.push(selectedProducts[0])
+                matchProducts.push(selectedProducts[1])
+            } else {
 
-        if (matchProducts.length <= 0 || selectedProducts[selectedProducts.length - 2] === product) {
-            matchProducts.push(product)
-        } else {
-
-            if (matchProducts.length === 1) matchProducts = []
-            if (selectedProducts.length >= 2) selectedProducts = []
-        }
-
-
-        $('.flip-card').each(function () {
-            var cardProduct = $(this).data('product')
-            if (matchProducts.indexOf(cardProduct) <= -1) {
-                $(this).removeClass('selected')
+                $('.flip-card[data-product="' + selectedProducts[0] + '"]').removeClass('selected')
+                $('.flip-card[data-product="' + selectedProducts[1] + '"]').removeClass('selected')
             }
-        })
+            selectedProducts = []
+        }
     })
 }
