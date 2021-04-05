@@ -30,7 +30,8 @@ body {
   vertical-align: middle;
 }
 .card.open {
-  background-image: url('../img/urun-1.png');
+  background: transparent;
+  background-size: 99%;
 }
 /* Home Styles */
 #home-wrapper {
@@ -60,6 +61,8 @@ body {
   left: -40px;
   height: 606px;
   width: 606px;
+  opacity: 0;
+  transition: all .5s linear;
 }
 #home-wrapper .top-shapes {
   background: url(../img/desktop-home-shapes.png?) center 0 no-repeat;
@@ -92,6 +95,9 @@ body {
   position: absolute;
   right: 95px;
   top: 516px;
+  transition: all .5s linear;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /** Flip card style **/
@@ -180,4 +186,14 @@ body {
   height: 55px;
   display: block;
   margin: 12px auto;
+}
+
+/** Game Over **/
+body.game-over #home-wrapper .text2,
+body.game-over #home-wrapper .alisveris-btn {
+    opacity: 1;
+    visibility: visible;
+}
+body.game-over .cards-div .flip-card{
+    pointer-events: none;
 }
