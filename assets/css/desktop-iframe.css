@@ -209,6 +209,7 @@ body.game-over #single-wrapper .cards-div{
     transition: all .5s linear;
     opacity: 0;
     height: 0;
+    visibility: hidden;
 }
 body.game-over #single-wrapper .text2{
     height: 298px;

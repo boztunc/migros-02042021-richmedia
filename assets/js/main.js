@@ -1,3 +1,4 @@
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 $(document).ready(function () {
     addCards()
     setTimeout(function () {
@@ -28,6 +29,9 @@ function addCards() {
 }
 
 function handleCard(cardNumber, cardCategoryNumber) {
+    if (isMobile) {
+        return '<div class="flip-card card" data-product="prod-' + cardNumber + '"><div class="flip-card-inner card"><div class="flip-card-front"><span class="card' + cardNumber + '"></span></div><div class="flip-card-back"><span class="card card' + cardNumber + ' open" style="background-image:url(./assets/img/products/' + cardCategoryNumber + '/' + cardNumber + '.png)"></span></div></div></div>'
+    }
     return '<div class="flip-card card" data-product="prod-' + cardNumber + '"><div class="flip-card-inner card"><div class="flip-card-front"><span class="card' + cardNumber + '"></span></div><div class="flip-card-back"><span class="card card' + cardNumber + ' open" style="background-image:url(./assets/img/products/' + cardCategoryNumber + '/' + cardNumber + '.png)"></span></div></div></div>'
 }
 

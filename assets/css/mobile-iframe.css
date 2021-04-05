@@ -21,7 +21,8 @@ body {
   padding-top: 24%;
 }
 .card.open {
-  background-image: url('../img/urun-1.png');
+    background: transparent;
+    background-size: 99%;
 }
 
 /* Home Styles */
@@ -49,6 +50,9 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
+  opacity: 0;
+  transition: all .5s linear;
+  visibility: hidden;
 }
 #home-wrapper .cards-div {
   position: absolute;
@@ -88,6 +92,9 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
+  opacity: 0;
+  transition: all .5s linear;
+  visibility: hidden;
 }
 
 #single-wrapper .cards-div {
@@ -99,4 +106,61 @@ body {
   height: auto;
   text-align: center;
   padding: 19% 12% 0;
+}
+
+
+/** Flip card style **/
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    
+}
+.flip-card-inner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    
+}
+.flip-card.hover .flip-card-inner,
+.flip-card.selected .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+.flip-card.card {
+    background: transparent;
+}
+.flip-card-inner.card{
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+.card.open{
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
+}
+
+body.game-over .mobile-home-bg2,
+body.game-over .mobile-single-bg2 {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+body.game-over .cards-div{
+    transition: all .5s linear;
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
 }
