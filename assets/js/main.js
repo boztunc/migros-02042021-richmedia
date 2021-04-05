@@ -79,7 +79,9 @@ function selectCards() {
         }
 
         if (matchProducts.length === 8) {
-            $('body').addClass('game-over')
+            setTimeout(function () {
+                $('body').addClass('game-over')
+            }, 800)
         }
     })
 }

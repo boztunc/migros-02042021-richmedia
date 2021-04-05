@@ -161,6 +161,10 @@ body {
   position: relative;
   top: 10px;
   margin-bottom: 45px;
+  transition: all .5s linear;
+  opacity: 0;
+  height: 0;
+  display: block;
 }
 #single-wrapper .card {
   width: 93px;
@@ -186,14 +190,27 @@ body {
   height: 55px;
   display: block;
   margin: 12px auto;
+  opacity: 0;
+  transition: all .5s linear;
+  visibility: hidden;
 }
 
 /** Game Over **/
 body.game-over #home-wrapper .text2,
-body.game-over #home-wrapper .alisveris-btn {
+body.game-over #home-wrapper .alisveris-btn,
+body.game-over #single-wrapper .alisveris-btn {
     opacity: 1;
     visibility: visible;
 }
 body.game-over .cards-div .flip-card{
     pointer-events: none;
+}
+body.game-over #single-wrapper .cards-div{
+    transition: all .5s linear;
+    opacity: 0;
+    height: 0;
+}
+body.game-over #single-wrapper .text2{
+    height: 298px;
+    opacity: 1;
 }
