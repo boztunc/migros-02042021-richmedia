@@ -7,7 +7,7 @@
   padding: 0;
 }
 body {
-  background: orange;
+  /* background: orange; */
 }
 .alisveris-btn {
   background: url(../img/alisveris-btn.png?) no-repeat;
@@ -151,8 +151,8 @@ body {
   width: 298px;
   height: 279px;
   position: relative;
-  top: 10px;
-  margin-bottom: 45px;
+  top: 0;
+  margin-bottom: 50px;
 }
 #single-wrapper .text2 {
   background: url(../img/desktop-single-text2.png?) no-repeat;
@@ -160,8 +160,8 @@ body {
   width: 298px;
   height: 298px;
   position: relative;
-  top: 10px;
-  margin-bottom: 45px;
+  top: 0;
+  margin-bottom: 30px;
   transition: all .5s linear;
   opacity: 0;
   height: 0;
@@ -190,7 +190,7 @@ body {
   width: 200px;
   height: 55px;
   display: block;
-  margin: 12px auto;
+  margin: 22px auto 0 auto;
   opacity: 0;
   transition: all .5s linear;
   visibility: hidden;
