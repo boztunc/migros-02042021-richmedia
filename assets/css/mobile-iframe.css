@@ -12,13 +12,13 @@ body {
 .card {
   background: url(../img/card.png?) no-repeat;
   background-size: 100%;
-  width: 21%;
+  width: 20%;
   height: auto;
   display: inline-block;
   margin: 1%;
   cursor: pointer;
   vertical-align: middle;
-  padding-top: 25%;
+  padding-top: 24%;
 }
 .card.open {
     background: transparent;
