@@ -62,6 +62,7 @@ body {
   height: 606px;
   width: 606px;
   opacity: 0;
+  visibility: hidden;
   transition: all .5s linear;
 }
 #home-wrapper .top-shapes {
