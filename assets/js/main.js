@@ -71,20 +71,15 @@ function selectCards() {
         var product = $(this).data('product')
 
         selectedProducts.push(product)
-        $(this).css('pointer-events', 'none')
-        if (selectedProducts.length === 2) {
-            var selectedProd1 = $('.flip-card[data-product="' + selectedProducts[0] + '"]')
-            var selectedProd2 = $('.flip-card[data-product="' + selectedProducts[1] + '"]')
 
-            selectedProd1.css('pointer-events', 'none')
-            selectedProd2.css('pointer-events', 'none')
+        if (selectedProducts.length === 2) {
+            $('.flip-card').css('pointer-events', 'none')
 
             if (selectedProducts[0] === selectedProducts[1]) {
                 matchProducts.push(selectedProducts[1])
 
             } else {
-                selectedProd1.css('pointer-events', 'all')
-                selectedProd2.css('pointer-events', 'all')
+
                 setTimeout(function () {
                     $('.flip-card[data-product="' + selectedProducts[0] + '"]').removeClass('selected')
                     $('.flip-card[data-product="' + selectedProducts[1] + '"]').removeClass('selected')
@@ -92,12 +87,16 @@ function selectCards() {
             }
 
             setTimeout(function () {
+                $('.flip-card').each(function () {
+                    var dataProd = $(this).data('product')
+                    if (matchProducts.indexOf(dataProd) <= -1) $(this).css('pointer-events', 'all')
+                })
                 selectedProducts = []
             }, 1000)
 
         }
         if (matchProducts.length === 4) {
-            
+
             setTimeout(function () {
                 $('body').addClass('game-over')
             }, 500)
