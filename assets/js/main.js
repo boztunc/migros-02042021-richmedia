@@ -96,7 +96,6 @@ function selectCards() {
             }, 1000)
 
         }
-        console.log('matchProducts:', matchProducts)
         if (matchProducts.length === 4) {
             
             setTimeout(function () {
