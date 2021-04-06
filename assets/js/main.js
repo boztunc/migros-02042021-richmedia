@@ -76,14 +76,10 @@ function selectCards() {
                 matchProducts.push(selectedProducts[0])
                 matchProducts.push(selectedProducts[1])
             } else {
-                setTimeout(function () {
-                    $('.flip-card[data-product="' + selectedProducts[0] + '"]').removeClass('selected')
-                    $('.flip-card[data-product="' + selectedProducts[1] + '"]').removeClass('selected')
-                }, 800)
+                $('.flip-card[data-product="' + selectedProducts[0] + '"]').removeClass('selected')
+                $('.flip-card[data-product="' + selectedProducts[1] + '"]').removeClass('selected')
             }
-            setTimeout(function () {
-                selectedProducts = []
-            }, 1000)
+            selectedProducts = []
 
         }
 
