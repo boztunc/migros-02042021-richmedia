@@ -153,10 +153,10 @@ body {
   background: url(../img/desktop-single-text1.png?v2) no-repeat;
   background-size: 100%;
   width: 298px;
-  height: 279px;
+  height: 289px;
   position: relative;
   top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 #single-wrapper .text2 {
   background: url(../img/desktop-single-text2.png?) no-repeat;
