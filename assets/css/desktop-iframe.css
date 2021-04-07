@@ -57,7 +57,7 @@ body {
   background: url(../img/desktop-home-text2.png?) center 0 no-repeat;
   background-size: 606px;
   position: absolute;
-  top: 0;
+  top: -35px;
   left: -40px;
   height: 606px;
   width: 606px;
@@ -162,7 +162,7 @@ body {
   width: 300px;
   height: 378px;
   position: relative;
-  top: 0;
+  top: 60px;
   margin-bottom: 20px;
   transition: all .5s linear;
   opacity: 0;
@@ -192,7 +192,7 @@ body {
   width: 200px;
   height: 55px;
   display: block;
-  margin: 30px auto 0 auto;
+  margin: 120px auto 0 auto;
   opacity: 0;
   transition: all .5s linear;
   visibility: hidden;
@@ -220,6 +220,7 @@ body.game-over #single-wrapper .text2{
     opacity: 1;
 }
 body.game-over #single-wrapper .text1,
-body.game-over #home-wrapper .text1 {
+body.game-over #home-wrapper .text1,
+body.game-over #single-wrapper .cards-div {
     display: none;
 }
