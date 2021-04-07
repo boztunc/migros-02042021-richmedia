@@ -47,6 +47,7 @@ function hoverCardEffect() {
 }
 
 function loadFlipCards() {
+    $('.flip-card').css('opacity', 1)
     var randomNumbers = generateRandomNumber(0, 8)
 
 

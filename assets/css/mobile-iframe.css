@@ -10,8 +10,6 @@ body {
 
 }
 .card {
-  background: url(../img/card.png?) no-repeat;
-  background-size: 100%;
   width: 20%;
   height: auto;
   display: inline-block;
@@ -22,7 +20,7 @@ body {
 }
 .card.open {
     background: transparent;
-    background-size: 99%;
+    background-size: 100%;
 }
 
 /* Home Styles */
@@ -122,12 +120,17 @@ body {
     height: 100%;
     text-align: center;
     transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    
+    
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 
 }
 .flip-card.hover .flip-card-inner,
 .flip-card.selected .flip-card-inner {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 .flip-card-front, .flip-card-back {
     position: absolute;
@@ -138,6 +141,7 @@ body {
 }
 .flip-card-back {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 .flip-card.card {
     background: transparent;
@@ -146,6 +150,10 @@ body {
     padding: 0;
     margin: 0;
     display: block;
+}
+.flip-card-front{
+    background: url(../img/card.png?) no-repeat;
+    background-size: 100%;
 }
 .card.open{
     margin: 0 !important;
@@ -160,6 +168,7 @@ body.game-over .mobile-single-bg2 {
 }
 body.game-over .cards-div{
     transition: all .5s linear;
+    -webkit-transition: all .5s linear;
     opacity: 0;
     height: 0;
     visibility: hidden;

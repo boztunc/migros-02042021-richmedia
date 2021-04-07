@@ -107,6 +107,8 @@ body {
     perspective: 1000px;
     width: 100px;
     height: 120px;
+    opacity: 0;
+    transition: opacity .3s linear;
 }
 .flip-card-inner {
     position: relative;
