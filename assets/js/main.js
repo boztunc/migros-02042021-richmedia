@@ -1,11 +1,12 @@
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 $(document).ready(function () {
     addCards()
+    setTimeout(function () { $('.m-logo').css('opacity', 1) }, 600)
     setTimeout(function () {
         loadFlipCards()
         // hoverCardEffect()
         selectCards()
-    }, 500)
+    }, 1000)
 })
 
 function addCards() {

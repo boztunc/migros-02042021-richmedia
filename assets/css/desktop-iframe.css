@@ -21,6 +21,8 @@ body {
   background-size: 100%;
   display: inline-block;
   vertical-align: middle;
+  opacity: 0;
+  transition: opacity .5s linear;
 }
 .card {
   background: url(../img/card.png?) no-repeat;
