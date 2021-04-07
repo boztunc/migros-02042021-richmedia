@@ -28,7 +28,7 @@ body {
   position: relative;
 }
 #home-wrapper .mobile-home-bg1 {
-  background: url(../img/mobile-home1.jpg?) no-repeat;
+  background: url(../img/mobile-home1.jpg?v2) no-repeat;
   background-size: 100%;
   width: 100%;
   padding-top: 99.33333333%;
@@ -70,7 +70,7 @@ body {
 }
 
 #single-wrapper .mobile-single-bg1 {
-  background: url(../img/mobile-single1.jpg?) no-repeat;
+  background: url(../img/mobile-single1.jpg?v2) no-repeat;
   background-size: 100%;
   width: 100%;
   padding-top: 107.46666667%;
@@ -121,8 +121,8 @@ body {
     text-align: center;
     transition: transform 0.5s;
     -webkit-transition: transform 0.5s;
-    
-    
+
+
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 

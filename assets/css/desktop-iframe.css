@@ -47,7 +47,7 @@ body {
   transform: translateX(-50%);
 }
 #home-wrapper .text1 {
-  background: url(../img/desktop-home-text1.png?) center 0 no-repeat;
+  background: url(../img/desktop-home-text1.png?v2) center 0 no-repeat;
   background-size: 606px;
   position: absolute;
   top: 0px;
@@ -150,7 +150,7 @@ body {
 }
 
 #single-wrapper .text1 {
-  background: url(../img/desktop-single-text1.png?) no-repeat;
+  background: url(../img/desktop-single-text1.png?v2) no-repeat;
   background-size: 100%;
   width: 298px;
   height: 279px;
