@@ -1,103 +1,109 @@
 <!--
-DESKTOP HOME & TOPIC
+DESKTOP & MOBILE
+HOME
 -->
 <script>
-  gagready.push(function() {
+
+    if (window.parent.gagready) {
+        window.parent.gagready.push(function () {
+            window.parent.jQuery(function ($) {
+                if (window.parent.gag.mobileTheme) {
+                    $('#brand-skinundernav', window.parent.document).prepend(handleMobileElements());
+                }
+                else {
+                    $('#brand-skinundernav', window.parent.document).prepend(handleDesktopElements());
+                }
+                window.parent.gag.trackEventOnLoad();
+            });
+        });
+    }
+
 
     function handleDesktopElements() {
         var cssFilePath = '<link href="https://qaimages.kizlarsoruyor.com/custom/cover-pages/template/desktop-home.css?" rel="stylesheet" />';
         var background = '<div class="desktop-home-bg"></div>';
-        var pageskingFrame = '<div class="frame-div"><iframe id="rm-frame" src="https://qaimages.kizlarsoruyor.com/custom/brands/migros/richmedia/desktop-home.html" scrolling="no" frameborder="0"></iframe></div>';
+        var pageskingFrame = '<div class="frame-div"><iframe id="rm-frame" src="https://images.kizlarsoruyor.com/custom/Brands/migros/richmedia/migros-02042021/desktop-home.html" scrolling="no" frameborder="0"></iframe></div>';
         var pageSkingImpression = '<img src="https://ad.doubleclick.net/ddm/trackimp/N192603.1812349KIZLARSORUYOR.COM/B25669512.300160338;dc_trk_aid=493260456;dc_trk_cid=148696216;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ltd=?" style="position:absolute;border:none;top:0;pointer-events:none;width:1px;height:1px;" />';
         var pageSkingWrapper = '<div>' + cssFilePath + background + pageskingFrame + pageSkingImpression + '<div>';
         return pageSkingWrapper;
     }
 
-    $(function() {
-      $('#brand-skinundernav', window.parent.document).prepend(handleDesktopElements());
-    });
-
-  });
-</script>
-
-<!--
-MOBILE HOME & TOPIC
--->
-<script>
-  gagready.push(function() {
-
     function handleMobileElements() {
         var cssFilePath = '<link href="https://qaimages.kizlarsoruyor.com/custom/cover-pages/template/mobile-home.css?" rel="stylesheet" />';
-        var pageskingFrame = '<div class="frame-div"><iframe id="rm-frame" src="https://qaimages.kizlarsoruyor.com/custom/brands/migros/richmedia/mobile-home.html" scrolling="no" frameborder="0"></iframe></div>';
+        var pageskingFrame = '<div class="frame-div"><iframe id="rm-frame" src="https://images.kizlarsoruyor.com/custom/Brands/migros/richmedia/migros-02042021/mobile-home.html" scrolling="no" frameborder="0"></iframe></div>';
         var pageSkingImpression = '<img src="https://ad.doubleclick.net/ddm/trackimp/N192603.1812349KIZLARSORUYOR.COM/B25669512.300160338;dc_trk_aid=493260456;dc_trk_cid=148696216;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ltd=?" style="position:absolute;border:none;top:0;pointer-events:none;width:1px;height:1px;" />';
         var pageSkingWrapper = '<div>' + cssFilePath  + pageskingFrame + pageSkingImpression + '<div>';
         return pageSkingWrapper;
     }
 
-    $(function() {
-      $('#brand-skinundernav', window.parent.document).prepend(handleMobileElements());
-    });
-
-  });
 </script>
 
-<!--
-DESKTOP SINGLE
--->
-<script>
-  gagready.push(function() {
+<img src="%%VIEW_URL_UNESC%%" style="display:none" />
 
-    function handleDesktopElements() {
-      //Coverpage top
-      var cssFilePath = '<link href="https://qaimages.kizlarsoruyor.com/custom/cover-pages/template/desktop-single.css?" rel="stylesheet" />';
-      var coverpageBg = '<div class="desktop-single-bg"></div>';
-      var coverpageTop = '<a href="https://kiz.sr/3cKG6FX" target="_blank" class="desktop-single-top" style="min-height: 46px;"></a>';
-      var pageSkingImpression = '<img src="https://ad.doubleclick.net/ddm/trackimp/N192603.1812349KIZLARSORUYOR.COM/B25669512.300160338;dc_trk_aid=493260456;dc_trk_cid=148696216;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ltd=?" style="position:absolute;border:none;top:0;pointer-events:none;width:1px;height:1px;" />';
-      var pageSkingWrapper = '<div>' + cssFilePath  + coverpageBg + coverpageTop + pageSkingImpression + '<div>';
-      return pageSkingWrapper;
+<!--
+DESKTOP & MOBILE
+SINGLE
+-->
+
+<script>
+
+    if (window.parent.gagready) {
+        window.parent.gagready.push(function () {
+            window.parent.jQuery(function ($) {
+                if (window.parent.gag.mobileTheme) {
+                    handleMobileElements($)
+                }
+                else {
+                    handleDesktopElements($)
+                }
+                window.parent.gag.trackEventOnLoad();
+            });
+        });
     }
 
-    $(function() {
-      //append coverpage right
-      var coverpageRight = '<div id="brand-skinright"><div class="frame-div"><iframe id="rm-frame" src="https://qaimages.kizlarsoruyor.com/custom/brands/migros/richmedia/desktop-single.html" scrolling="no" frameborder="0"></iframe></div></div>';
-      $('#container-wrapper .sidebar', window.parent.document).prepend(coverpageRight);
-      //prepend handleDesktopElements
-      $('#brand-skinundernav', window.parent.document).prepend(handleDesktopElements());
+    function handleDesktopElements($) {
+        //append coverpage right
+        var coverpageRight = '<div id="brand-skinright"><div class="frame-div"><iframe id="rm-frame" src="https://images.kizlarsoruyor.com/custom/Brands/migros/richmedia/migros-02042021/desktop-single.html" scrolling="no" frameborder="0"></iframe></div></div>';
+        $('#container-wrapper .sidebar', window.parent.document).prepend(coverpageRight);
+        //prepend handleDesktopElements
+        $('#brand-skinundernav', window.parent.document).prepend(handleDesktop());
+    }
 
-    });
-  });
-</script>
+    function handleMobileElements($) {
 
-<!-- test github -->
-<!--
-MOBILE SINGLE
--->
-<script>
-  gagready.push(function() {
+        //prepend handleMobileElements
+        $('#brand-skinundernav', window.parent.document).prepend(handleMobile());
 
-    function handleMobileElements() {
-        var cssFilePath = '<link href="https://qaimages.kizlarsoruyor.com/custom/cover-pages/template/mobile-single.css?" rel="stylesheet" />';
-        var expandBtn = '<div class="expand-btn"></div>';
-        var pageskingFrame = '<div class="frame-div"><iframe id="rm-frame" src="https://qaimages.kizlarsoruyor.com/custom/brands/migros/richmedia/mobile-single.html" scrolling="no" frameborder="0"></iframe></div>';
+        //append coverpage middle
+        var coverpageMiddle = '<div id="mobile-pageskin-middle"><a href="https://kiz.sr/3cKG6FX" target="_blank" class="mobile-pageskin-link"><img src="https://qaimages.kizlarsoruyor.com/custom/cover-pages/template/mobile-single2.png?"></a></div>';
+        $('#content-wrapper .single-post', window.parent.document).after(coverpageMiddle);
+        //Expand Button
+        $('.expand-btn', window.parent.document).click(function () {
+            $('#brand-skinundernav', window.parent.document).addClass('frame-expanded');
+            $(this).remove();
+        });
+    }
+
+    function handleDesktop() {
+        //Coverpage top
+        var cssFilePath = '<link href="https://qaimages.kizlarsoruyor.com/custom/cover-pages/template/desktop-single.css?" rel="stylesheet" />';
+        var coverpageBg = '<div class="desktop-single-bg"></div>';
+        var coverpageTop = '<a href="https://kiz.sr/3cKG6FX" target="_blank" class="desktop-single-top" style="min-height: 46px;"></a>';
         var pageSkingImpression = '<img src="https://ad.doubleclick.net/ddm/trackimp/N192603.1812349KIZLARSORUYOR.COM/B25669512.300160338;dc_trk_aid=493260456;dc_trk_cid=148696216;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ltd=?" style="position:absolute;border:none;top:0;pointer-events:none;width:1px;height:1px;" />';
-        var pageSkingWrapper = '<div>' + cssFilePath  + expandBtn + pageskingFrame + pageSkingImpression + '<div>';
+        var pageSkingWrapper = '<div>' + cssFilePath + coverpageBg + coverpageTop + pageSkingImpression + '<div>';
         return pageSkingWrapper;
     }
 
-    $(function() {
-      //prepend handleMobileElements
-      $('#brand-skinundernav', window.parent.document).prepend(handleMobileElements());
+    function handleMobile() {
+        var cssFilePath = '<link href="https://qaimages.kizlarsoruyor.com/custom/cover-pages/template/mobile-single.css?" rel="stylesheet" />';
+        var expandBtn = '<div class="expand-btn"></div>';
+        var pageskingFrame = '<div class="frame-div"><iframe id="rm-frame" src="https://images.kizlarsoruyor.com/custom/Brands/migros/richmedia/migros-02042021/mobile-single.html" scrolling="no" frameborder="0"></iframe></div>';
+        var pageSkingImpression = '<img src="https://ad.doubleclick.net/ddm/trackimp/N192603.1812349KIZLARSORUYOR.COM/B25669512.300160338;dc_trk_aid=493260456;dc_trk_cid=148696216;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ltd=?" style="position:absolute;border:none;top:0;pointer-events:none;width:1px;height:1px;" />';
+        var pageSkingWrapper = '<div>' + cssFilePath + expandBtn + pageskingFrame + pageSkingImpression + '<div>';
+        return pageSkingWrapper;
+    }
 
-      //append coverpage middle
-      var coverpageMiddle = '<div id="mobile-pageskin-middle"><a href="https://kiz.sr/3cKG6FX" target="_blank" class="mobile-pageskin-link"><img src="https://qaimages.kizlarsoruyor.com/custom/cover-pages/template/mobile-single2.png?"></a></div>';
-      $('#content-wrapper .single-post', window.parent.document).after(coverpageMiddle);
-      //Expand Button
-      $('.expand-btn').click(function() {
-        $('#brand-skinundernav', window.parent.document).addClass('frame-expanded');
-        $(this).remove();
-      });
-
-    });
-
-  });
 </script>
+
+
+<img src="%%VIEW_URL_UNESC%%" style="display:none" />
