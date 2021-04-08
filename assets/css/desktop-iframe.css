@@ -25,7 +25,7 @@ body {
   transition: opacity .5s linear;
 }
 .card {
-  
+
   display: inline-block;
   cursor: pointer;
   vertical-align: middle;
@@ -53,6 +53,7 @@ body {
   left: -40px;
   height: 606px;
   width: 606px;
+  display: block;
 }
 #home-wrapper .text2 {
   background: url(../img/desktop-home-text2.png?) center 0 no-repeat;
@@ -135,7 +136,7 @@ body {
 }
 .flip-card-front{
     background: url(../img/card.png?) no-repeat;
-    background-size: 100%;  
+    background-size: 100%;
 }
 .flip-card.card {
     background: transparent;
