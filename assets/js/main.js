@@ -74,7 +74,7 @@ function selectCards() {
             gameStart = true
 
             //game end send param to ga
-            if (window.gagready) gag.trackEventWithArgs('Migros-SanalMarket', 'Pelmanism-Game', 'Start')
+            ga('send', 'event', 'Migros-SanalMarket', 'Pelmanism-Game', 'Start');
         }
         $(this).addClass('selected')
         var product = $(this).data('product')
@@ -107,7 +107,7 @@ function selectCards() {
         if (matchProducts.length === 4) {
 
             //game end send param to ga
-            if (window.gagready) gag.trackEventWithArgs('Migros-SanalMarket', 'Pelmanism-Game', 'End')
+            ga('send', 'event', 'Migros-SanalMarket', 'Pelmanism-Game', 'End');
 
             setTimeout(function () {
                 $('body').addClass('game-over')
