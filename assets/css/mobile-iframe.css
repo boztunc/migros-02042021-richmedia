@@ -9,6 +9,9 @@
 body {
 
 }
+.cards-div {
+  pointer-events: none;
+}
 .card {
   width: 20%;
   height: auto;
@@ -17,6 +20,7 @@ body {
   cursor: pointer;
   vertical-align: middle;
   padding-top: 24%;
+  pointer-events: auto;
 }
 .card.open {
     background: transparent;
