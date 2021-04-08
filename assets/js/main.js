@@ -68,7 +68,14 @@ function loadFlipCards() {
 function selectCards() {
     var selectedProducts = []
     var matchProducts = []
+    var gameStart = false
     $('.flip-card').click(function () {
+        if (!gameStart) {
+            gameStart = true
+
+            //game end send param to ga
+            if (window.gagready) gag.trackEventWithArgs('Migros-SanalMarket', 'Pelmanism-Game', 'Start')
+        }
         $(this).addClass('selected')
         var product = $(this).data('product')
 
@@ -98,6 +105,9 @@ function selectCards() {
 
         }
         if (matchProducts.length === 4) {
+
+            //game end send param to ga
+            if (window.gagready) gag.trackEventWithArgs('Migros-SanalMarket', 'Pelmanism-Game', 'End')
 
             setTimeout(function () {
                 $('body').addClass('game-over')
