@@ -25,15 +25,14 @@ body {
   transition: opacity .5s linear;
 }
 .card {
-  background: url(../img/card.png?) no-repeat;
-  background-size: 100%;
+  
   display: inline-block;
   cursor: pointer;
   vertical-align: middle;
 }
 .card.open {
   background: transparent;
-  background-size: 99%;
+  background-size: 100%;
 }
 /* Home Styles */
 #home-wrapper {
@@ -133,6 +132,10 @@ body {
 }
 .flip-card-back {
     transform: rotateY(180deg);
+}
+.flip-card-front{
+    background: url(../img/card.png?) no-repeat;
+    background-size: 100%;  
 }
 .flip-card.card {
     background: transparent;
